@@ -9,7 +9,7 @@ phases:
       - npm install -g serverless
   pre_build:
     commands:
-      - curl -fL https://github.com/coursier/coursier/releases/latest/download/cs-x86_64-pc-linux.gz | gzip -d > cs && chmod +x cs && ./cs setup
+      - curl -fL https://github.com/coursier/coursier/releases/latest/download/cs-x86_64-pc-linux.gz | gzip -d > cs && chmod +x cs && ./cs setup -y
   build:
     commands:
       - sls deploy -v
