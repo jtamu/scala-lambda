@@ -12,4 +12,7 @@ phases:
       - curl -fL https://github.com/coursier/coursier/releases/latest/download/cs-x86_64-pc-linux.gz | gzip -d > cs && chmod +x cs && ./cs setup -y
   build:
     commands:
+      - sbt assembly
+  post_build:
+    commands:
       - sls deploy -v
